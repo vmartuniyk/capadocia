@@ -1,4 +1,432 @@
 @import config
 
 // CUSTOM USER STYLES & IMPORTS
+*,
+*::after,
+*::before
+    box-sizing: border-box
+.page-section
+    margin: 200px auto
+    max-width: 1920px
+.title
+    margin-bottom: 100px
+    font-family: $balqis
+    font-weight: 300
+    font-size: 96px
+    line-height: 128px
+    color: #E2AB3F
+    span
+        display: block
+        margin-top: -35px
+        font-family: $roboto
+        font-size: 24px
+        line-height: 28px
+        color: #000000
 
+.container
+    max-width: 1230px
+    margin: 0 auto
+    padding: 0 15px
+.header
+    height: 100vh
+    background-image: url('../images/header-bg.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: bottom center
+.header__top
+    display: flex
+    justify-content: space-between
+    padding-top: 72px
+    font-size: 24px
+    line-height: 28px
+    font-family: $roboto-regular
+.menu__list-item
+    display: inline-block
+    + .menu__list-item
+        margin-left: 52px
+.header__phone
+    padding-left: 40px
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        background-image: url('../images/phone-icon.svg')
+        width: 30px
+        height: 30px
+        left: 0
+.header__title
+    padding-top: 152px
+    text-align: center
+    font-size: 250px
+    line-height: 334px
+    font-family: $balqis
+    font-weight: 300
+    span 
+        display: block
+        text-align: right
+        font-size: 56px
+        line-height: 66px
+        font-weight: 300
+        font-style: italic
+        font-family: $roboto
+        margin-top: -66px
+        margin-right: 85px
+
+.fairy-tail__slider,
+.our-trip__slider
+    width: 50%
+.slick-btn
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 5
+    cursor: pointer
+    border: none
+    background: transparent
+    outline: none
+.slick-prev
+    left: 0
+.slick-next
+    right: 0
+.fairy-tail__inner
+    position: relative
+.fairy-tail__container,
+.our-trip__container
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    max-width: 1230px
+    padding: 0 15px
+    margin: 0 auto
+.fairy-tail__body
+    margin-left: auto
+    padding-left: 55px
+    width: 50%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+.fairy-tail__body-title
+    font-family: $roboto-regular 
+.fairy-tail__title
+    span 
+        margin-left: 185px
+.fairy-tail__text
+    padding: 10px 0
+.our-trip__inner
+    position: relative
+.our-trip__content
+    width: 50%
+    padding-right: 55px
+.our-trip__slider 
+    margin-left: auto
+.our-trip__title
+    span
+        margin-left: 240px
+.our-trip__body
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: start
+    height: 100%
+.our-trip__list
+    margin: 5px 0px
+    font-size: 24px
+    line-height: 28px
+.our-trip__list
+    li:first-child
+        margin-bottom: 20px
+        font-family: $roboto-regular 
+        list-style: none
+.our-trip__btn
+    font-weight: 300
+    font-size: 24px
+    line-height: 28px
+    font-family: $roboto-regular 
+    padding: 11px 53px
+    border: 1px solid #E2AB3F
+.hotel__title
+    span 
+        margin-left: 120px
+
+.hotel__inner
+    display: flex
+    // flex-wrap: wrap
+
+.hotel__images
+    margin-right: 100px
+
+.hotel__text    
+    margin-bottom: 20px
+.hotel__gallery
+    margin-top: 30px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    a
+        margin-top: 50px
+.price
+    background-image: url('../images/price-bg.png')
+    background-position: center right 10%
+    background-repeat: no-repeat
+.price__title
+    span 
+        margin-left: 120px
+.price__inner
+    display: flex
+    flex-wrap: wrap
+.price__on
+    width: 530px
+    margin-right: 70px
+.price__on-title,
+.price__off-title
+    font-size: 24px
+    line-height: 28px
+    font-family: $roboto-regular
+    margin-bottom: 50px
+.price__list-item
+    margin-bottom: 20px
+
+.contacts__inner
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+.contacts__content
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    text-align: center
+.contacts__date,
+.contacts__price
+    font-family: $balqis
+    font-size: 96px
+    line-height: 100px
+    color: #E2AB3F
+    span 
+        display: block
+        margin-top: -10px
+        margin-left: 200px
+        font-weight: 300
+        font-size: 24px
+        line-height: 28px
+        font-family: $roboto-italic
+        color: #000
+.contacts__price
+    margin-left: 120px
+.contacts__form
+    max-width: 383px
+    margin: 0 auto
+.contact__form-title
+    margin-bottom: 50px
+    font-size: 24px
+    line-height: 28px
+    font-family: $roboto
+    color: #000000
+.contact__form-input
+    border: 1px solid #E2AB3F
+    height: 50px
+    display: block
+    margin-bottom: 20px
+    width: 100%
+    padding: 0px 31px
+    font-weight: 300
+    font-size: 18px
+    line-height: 21px
+    font-family: $roboto
+    &::placeholder
+        color: #000s
+.contact__form-btn
+    height: 50px
+    font-weight: 300
+    font-size: 24px
+    line-height: 28px
+    text-transform: uppercase
+    text-align: center
+    font-family: $roboto-regular
+    background: #FFFFFF
+    border: 1px solid #E2AB3F
+    padding: 11px 41px
+    cursor: pointer
+
+
+.footer
+    background-image: url(../images/footer-bg.jpg)
+    height: 100vh
+    background-repeat: no-repeat
+    background-position: bottom center
+    padding-top: 96px
+.footer__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+.footer__text
+    font-size: 86px
+    line-height: 115px
+    font-family: $balqis
+.footer__contacts
+    width: 356px
+    height: 527px
+    background-image: url(../images/footer-contact-bg.png)
+    background-repeat: no-repeat
+    text-align: center
+    background-size: cover 
+.footer__contacts-title
+    font-size: 86px
+    line-height: 115px
+    font-family: $balqis
+    color: #E2AB3F
+    padding-top: 50px
+    margin-bottom: 50px
+.footer__phone,
+.footer__email
+    display: inline-block
+    padding-left: 40px
+    position: relative
+    &::before
+        content: ''
+        position: absolute 
+        width: 30px
+        height: 30px
+        left: 0px
+        top: -5px
+
+.footer__phone
+    margin-bottom: 20px
+    &::before
+        background-image: url(../images/footer-phone-icon.svg)
+        
+.footer__email
+    &::before
+        background-image: url(../images/footer-email-icon.svg)
+.footer__social
+    margin-top: 38px
+    a 
+        margin: 0 7px
+
+@media (max-width: 1240px)
+    .header__title
+        font-size: 180px 
+        line-height: 220px
+        padding-top: 120px
+        span 
+            font-size: 50px
+            margin-top: -50px
+
+
+@media (max-width: 990px)
+    .page-section
+        margin: 100px 0
+    .fairy-tail__container,
+    .our-trip__container
+        position: static
+    .fairy-tail__slider,
+    .our-trip__slider
+        width: 100%
+    
+    .fairy-tail__body,
+    .our-trip__content
+        width: 100%
+        padding-left: 0px
+    .our-trip__content,
+    .hotel__images,
+    .contacts__content
+        margin-bottom: 20px
+    
+@media (max-width: 840px)
+    .header__top
+        font-size: 20px
+        line-height: 24px
+    .header__title
+        font-size: 100px 
+        line-height: 150px
+        padding-top: 100px
+        span 
+            font-size: 30px
+            margin-top: -44px
+    .header__phone
+        &::before
+            width: 25px
+            height: 25px
+            background-size: cover
+    .footer__text
+        font-size: 70px
+        line-height: 140px
+@media (max-width: 600px)
+    .page-section
+        margin: 50px 0
+    .title
+        font-size: 60px
+        line-height: 110px
+        margin-bottom: 25px
+        span
+            margin-left: 110px
+    .header__top
+        justify-content: center
+        flex-wrap: wrap
+    .menu__list
+        padding-left: 0px
+    .menu
+        width: 100%
+        text-align: center
+        margin: 0 0 25px
+    .header__title
+        font-size: 80px 
+        line-height: 120px
+        span 
+            font-size: 22px
+            margin-top: -44px
+            margin-right: 15px
+    .fairy-tail__item,
+    .our-trip__slider
+        img 
+            height: 50vh
+            width: 100%
+            object-fit: cover
+    .hotel__images,
+    .contacts__images
+        height: 50vh
+        width: 100%
+        object-fit: cover
+    .fairy-tail__title
+        font-size: 50px
+        span 
+            margin-left: 90px
+    .our-trip__title
+        span 
+            margin-left: 150px
+    .contacts__date,
+    .contacts__price
+        span 
+            margin-left: 120px
+    .footer
+        padding-top: 20px
+    .footer__text
+        font-size: 40px
+        line-height: 130px
+@media (max-width: 370px)
+    .header__title
+        font-size: 60px 
+        line-height: 100px
+        span 
+            font-size: 18px
+            margin-right: 0px
+    .fairy-tail__title
+        font-size: 20px
+        span 
+            margin-left: 90px
+    .title
+        font-size: 50px
+        span
+            font-size: 20px
+            margin-left: 90px
+    .menu__list
+        padding-left: 0
+    .menu__list-item
+        + .menu__list-item
+                margin-left: 18px
+    .footer__text
+        font-size: 35px
+        line-height: 110px

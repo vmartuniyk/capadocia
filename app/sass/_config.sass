@@ -1,10 +1,13 @@
 // USER VARIABLES SECTION
 
 $accent: orange // Accent Color
-$fontsize: 16px // Body Font Size
-$textcolor: #333 // Text Color
+$fontsize: 18px // Body Font Size
+$textcolor: #000 // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
-$roboto: Roboto, sans-serif // Roboto Font Family
+$roboto: RobotoCondensed-Light, sans-serif // Roboto Font Family
+$roboto-italic: RobotoCondensed-Italic, sans-serif // Roboto Font Family
+$roboto-regular: RobotoCondensed-Regular, sans-serif // Roboto Font Family
+$balqis: balqis, sans-serif // Roboto Font Family
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px
@@ -24,13 +27,13 @@ $gutter: $grid-gutter-width
 		font-family: $fname
 		font-style: $fstyle
 		font-weight: $fweight
-		// font-display: swap // Uncomment to initially display system fonts
+		font-display: swap // Uncomment to initially display system fonts
 		src: local($fname), url($furl) format('woff2')
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('balqis', normal, 400, '../fonts/balqis.woff2')
+@include font('RobotoCondensed-Light', normal, 300, '../fonts/RobotoCondensed-Light.woff2')
+@include font('RobotoCondensed-Italic', italic, 300, '../fonts/RobotoCondensed-LightItalic.woff2')
+@include font('RobotoCondensed-Regular', normal, 400, '../fonts/RobotoCondensed-Regular.woff2')
 
 // GENERAL DOCUMENT STYLES
 
@@ -53,6 +56,13 @@ body
 	font-size: $fontsize
 	min-width: 320px
 	position: relative
-	line-height: 1.65
+	line-height: 21px
 	overflow-x: hidden
 	color: $textcolor
+a
+	color: #000
+	&:hover,
+	&:focus
+		color: #000000
+		text-decoration: none
+		border-bottom: 2px solid #ff9800
