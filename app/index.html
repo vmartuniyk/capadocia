@@ -226,6 +226,25 @@
 							<span>Стоимость</span>
 						</div>
 					</div>
+					<div id="liqpay_checkout"></div>
+                    <script>
+                      window.LiqPayCheckoutCallback = function() {
+                        LiqPayCheckout.init({
+                          data: "eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXkiLCJhbW91bnQiOiIyIiwiY3VycmVuY3kiOiJVQUgiLCJkZXNjcmlwdGlvbiI6ItCf0YPRgtGW0LLQutCwINCyINCa0LDQv9Cw0LTQvtC60ZbRjiIsInB1YmxpY19rZXkiOiJzYW5kYm94X2kzMjI0Nzc3NzkyNyIsImxhbmd1YWdlIjoicnUifQ==",
+                          signature: "mHz/HWqD78hSajvx4kBDyb6zhck=",
+                          embedTo: "#liqpay_checkout",
+                          mode: "embed" // embed || popup,
+                            }).on("liqpay.callback", function(data){
+                          console.log(data.status);
+                          console.log(data);
+                          }).on("liqpay.ready", function(data){
+                            // ready
+                          }).on("liqpay.close", function(data){
+                            // close
+                        });
+                      };
+                    </script>
+                   
 					<form action="#" class="contacts__form">
 						<h4 class="contact__form-title">Оставить заявку или задать вопрос</h4>
 						<input class="contact__form-input contact__form-name" type="text" placeholder="Имя">
@@ -270,6 +289,7 @@
 	<script src="js/slick.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/app.min.js"></script>
+    <script src="//static.liqpay.ua/libjs/checkout.js" async></script>
 
 </body>
 
