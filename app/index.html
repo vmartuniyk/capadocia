@@ -226,24 +226,6 @@
 							<span>Стоимость</span>
 						</div>
 					</div>
-					<div id="liqpay_checkout"></div>
-                    <script>
-                      window.LiqPayCheckoutCallback = function() {
-                        LiqPayCheckout.init({
-                          data: "eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXkiLCJhbW91bnQiOiIxIiwiY3VycmVuY3kiOiJVQUgiLCJkZXNjcmlwdGlvbiI6ItCi0YPRgCDQkiDQmtCw0L/QsNC00L7QutGW0Y4iLCJwdWJsaWNfa2V5IjoiaTMyNDgzNjA4ODYwIiwibGFuZ3VhZ2UiOiJydSJ9",
-                          signature: "OUIhhuMQByfKHae38be4Xv8bkDc=",
-                          embedTo: "#liqpay_checkout",
-                          mode: "embed" // embed || popup,
-                            }).on("liqpay.callback", function(data){
-                          console.log(data.status);
-                          console.log(data);
-                          }).on("liqpay.ready", function(data){
-                            // ready
-                          }).on("liqpay.close", function(data){
-                            // close
-                        });
-                      };
-                    </script>
                    
 					<form action="#" class="contacts__form">
 						<h4 class="contact__form-title">Оставить заявку или задать вопрос</h4>
@@ -289,7 +271,6 @@
 	<script src="js/slick.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/app.min.js"></script>
-    <script src="//static.liqpay.ua/libjs/checkout.js" async></script>
 
 </body>
 
